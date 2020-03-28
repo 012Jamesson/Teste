@@ -1,12 +1,8 @@
 <ion-header >
   <ion-toolbar class="toolbar">
     <img  class="logo" src="assets/img/logo.png">
-
-    
     <ion-searchbar class="searchbar" (ionChange)="buscar($event)" placeholder="Buscar" mode="ios"></ion-searchbar>
-
-    <img  class="user" src="assets/img/userimg.png" float-right>
-
+    <img  class="user" src="assets/img/userimg.png" float-right />
   </ion-toolbar>
 </ion-header>
 
@@ -16,60 +12,51 @@
     <ion-icon name="apps-outline" style="color: #aeba4e;"></ion-icon> &nbsp;
     Todos
   </label>
-<br/>
-<br/>
-      
+  <br/>
+  <br/>
   <label class="label">
     <ion-icon name="checkmark-done-outline"></ion-icon> &nbsp;
     Atendidos
   </label>
-
-<br/>
-<br/>
-      
+  <br/>
+  <br/>
   <label class="label">
     <ion-icon name="trash-outline"></ion-icon> &nbsp;
     Lixeira
   </label>
 
-<ion-content class="bcontent" >
-  
-    <ion-card class="card" > 
-      
-<ion-list *ngFor="let User of users | filtro:textoBuscar" class="list">
-      <ion-item class="item">
+  <ion-content class="bcontent" >
+    <ion-card class="card" >
+      <ion-list *ngFor="let User of users | filtro:textoBuscar" class="list">
+        <ion-item class="item">
 
-        <ion-col>
-          <img  class="foto" src={{User.foto}}>
-        </ion-col>
+          <ion-col>
+            <img  class="foto" src={{User.foto}}>
+          </ion-col>
 
-        <ion-col  size="2" style="color:  #858b8f; font-weight: bold; margin-left: -8%;">
-          {{User.nome}}
-        </ion-col>
+          <ion-col  size="2" style="color:  #858b8f; font-weight: bold; margin-left: -8%;">
+            {{User.nome}}
+          </ion-col>
 
-        <ion-col  size="3" style="color:  #ababab; " >
-          {{User.email}}
-        </ion-col >
+          <ion-col  size="3" style="color:  #ababab; " >
+            {{User.email}}
+          </ion-col >
 
-        <ion-col size="2" style="color:  #ababab; ">
-          {{User.telefone}}
-        </ion-col>
+          <ion-col size="2" style="color:  #ababab; ">
+            {{User.telefone}}
+          </ion-col>
 
-        <ion-col size="2" style="color:  #ababab;">
-          {{User.cidade}}
-        </ion-col>
+          <ion-col size="2" style="color:  #ababab;">
+            {{User.cidade}}
+          </ion-col>
 
-        <ion-col size="2" style="color:  #ababab;">
-          <ion-icon name="trash-outline"></ion-icon> &nbsp;
-          <ion-icon name="apps-outline"></ion-icon> &nbsp;
-          <ion-icon name="checkmark-outline"></ion-icon>
-      </ion-col>
-              
-      </ion-item>
+          <ion-col size="2" style="color:  #ababab;">
+            <ion-icon name="trash-outline"></ion-icon> &nbsp;
+            <ion-icon name="apps-outline"></ion-icon> &nbsp;
+            <ion-icon name="checkmark-outline"></ion-icon>
+          </ion-col>
+        </ion-item>
       </ion-list>
-
     </ion-card>
- 
-</ion-content>
-
+  </ion-content>
 </ion-content>
